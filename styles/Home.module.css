@@ -1,3 +1,12 @@
+.h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.highlighted {
+  color: var(--primary-yellow);
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -44,6 +53,8 @@
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: var(--max-width);
   max-width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .card {
@@ -61,7 +72,6 @@
 
 .card h2 {
   font-weight: 600;
-  margin-bottom: 0.7rem;
 }
 
 .card p {
@@ -275,4 +285,22 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.table {
+  width: 600px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 1px solid yellow;
+}
+
+.table th {
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1px solid yellow;
+}
+
+.table th,
+.table td {
+  padding: 6px 12px;
 }
